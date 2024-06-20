@@ -1,0 +1,128 @@
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;    
+}
+
+.container{
+    flex: 1;
+}
+.navbar{
+    height: 5rem;
+   background-color: white;
+}
+
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link{
+    color: #222222 !important;
+}
+
+/* footer */
+.footer-info{
+    height: 10rem;
+    background-color: #ebebeb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+}
+
+.f-info-social,.f-info-brand,.f-info-links{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.f-info-links a{
+  text-decoration: none;
+  color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+    font-size: 1.4rem;
+}
+
+.f-info-social i{
+    font-size: 1.2rem;
+    margin: 1.2rem;
+}
+
+.f-info-social i:hover{
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+/* cards */
+
+.card{
+    border: none !important;
+    margin-bottom: 2rem !important;
+    margin-top: 2rem !important;
+    margin-left: 2rem !important;
+    margin-right: 1rem !important;
+}
+
+/* .card:hover{
+    background-color: antiquewhite;
+    color: #222222;
+} */
+
+.card-img-top{
+    margin-top: 1rem !important;
+    margin-right: 1rem !important;
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-img-top:hover{
+    opacity: 0.6;
+}
+
+.card-body{
+    font-weight: 300 !important;
+}
+
+.btn-add{
+    background-color: #fe424d !important;
+    border: none !important;
+    color: black !important;
+    border-radius: 1rem !important;
+}
+
+.card-img-top-show{
+    height: 18rem;
+    width: 75rem;
+    margin: 2rem;
+    box-sizing: 1rem !important;
+}
+
+.review-card{
+    border: 2px !important;
+}
+
+
+
+/* review */
+
+.card-body-review{
+    border: 1px solid black !important;
+    margin: 1rem !important;
+}
+
+/* btn */
+
+.btncss{
+    height: 4rem !important;
+    width: 6rem !important;
+}
+
+
