@@ -23,7 +23,7 @@ const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
 
-const dburl = process.env.ATLASDB_URL;
+// const dburl = process.env.ATLASDB_URL;
 
 main()
 .then(()=>{
@@ -34,7 +34,7 @@ main()
 });
 
 async function main() {
-    await mongoose.connect(dburl);
+    await mongoose.connect("mongodb://127.0.0.1:27017/wanderlust");
 }
 
 app.set("view engine","ejs");
@@ -45,17 +45,17 @@ app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname,"/public")));
 
 
-const store = MongoStore.create({
-    mongoUrl:dburl,
-    crypto:{
-     secret: process.env.SECRET,
-    },
-    touchAfter:24*3600,
- });
+// const store = MongoStore.create({
+//     mongoUrl:dburl,
+//     crypto:{
+//      secret: process.env.SECRET,
+//     },
+//     touchAfter:24*3600,
+//  });
 
- store.on("error",()=>{
-   console.log("error on mongo session store",err);
- })
+//  store.on("error",()=>{
+//    console.log("error on mongo session store",err);
+//  })
 
 const sessionOption ={
     
@@ -71,9 +71,7 @@ const sessionOption ={
 
 
 
-app.get("/",(req,res)=>{
-    res.send("hi, i am root");
-})
+
 
 app.use(session(sessionOption));
 app.use(flash());
